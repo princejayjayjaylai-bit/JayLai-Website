@@ -1,15 +1,27 @@
 export const profileImages = {
   heroPortrait: "/images/jay-lai-portrait-formal.png",
   headshot: "/images/jay-lai-headshot.png",
+  heroSilhouette: "/images/jay-lai-silhouette.png",
 } as const;
 
 export const profile = {
   nameEn: "Jay Lai",
+  nameZhHans: "黎杰",
+  nameZhHant: "黎傑",
+  /** @deprecated Use nameZhHans / getDisplayName */
   nameZh: "黎杰",
   taglineEn: "Law Student | Capital Markets",
   taglineZh: "法学 · 资本市场",
   targetRole: "Legal Intern (Hong Kong IPO)",
   targetRoleZh: "法律实习生（IPO方向）",
+  homeIntroEn:
+    "Hello—I’m Jay Lai, a law student focused on capital markets in Hong Kong, mainland China, and the United States. When I’m not in class or on a transaction, I’m usually listening to music, watching films, cooking, or finding small ways to unwind.",
+  homeIntroZh:
+    "你好，我是黎杰（Jay Lai），一名法学专业学生，主要关注香港、中国内地与美国的资本市场。课余之外，我喜欢音乐、电影、烹饪，也享受用不同的爱好给生活留白。",
+  aboutBioEn:
+    "I am an LL.B. candidate at East China University of Political Science and Law (GPA 89/100), with internship experience in Hong Kong IPO work and broader capital markets practice.",
+  aboutBioZh:
+    "我就读于华东政法大学（专业成绩 89/100），并在竞天公诚、大成（南宁）等实习中积累港股 IPO 与资本市场相关经验。",
   age: 21,
   education: {
     schoolEn: "East China University of Political Science and Law",

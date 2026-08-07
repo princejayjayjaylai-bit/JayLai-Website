@@ -5,6 +5,7 @@ type PageHeroProps = {
   title: React.ReactNode;
   description?: string;
   large?: boolean;
+  serifClassName?: string;
 };
 
 export function PageHero({
@@ -12,6 +13,7 @@ export function PageHero({
   title,
   description,
   large = false,
+  serifClassName = serifClass,
 }: PageHeroProps) {
   return (
     <section
@@ -33,7 +35,7 @@ export function PageHero({
         </p>
         <h1
           id="page-hero-heading"
-          className={`${serifClass} ${
+          className={`${serifClassName} ${
             large
               ? "text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl"
               : "text-3xl font-semibold leading-tight sm:text-4xl lg:text-5xl"
