@@ -3,7 +3,6 @@ export const zhHansMessages = {
     about: "关于",
     experience: "经历",
     projects: "项目",
-    achievements: "获奖",
     cv: "简历",
     interests: "兴趣爱好",
     contact: "联系",
@@ -27,6 +26,8 @@ export const zhHansMessages = {
     targetRole: "法律实习生（IPO 方向）",
     intro:
       "你好，我是黎杰（Jay Lai），法学专业在读，主要关注香港、中国内地与美国的资本市场。课业与交易项目之外，我持续关注音乐与电影，也常以烹饪作为调剂。",
+    introFollowUpBefore: "",
+    introFollowUpAfter: "",
     introduction: "个人介绍",
     explore: "浏览全站",
     exploreScrollNext: "向右浏览下一板块",
@@ -43,11 +44,7 @@ export const zhHansMessages = {
     },
     projects: {
       title: "项目与研究",
-      detail: "港股尽调、TPDD、Printer Session 及研究项目。",
-    },
-    achievements: {
-      title: "获奖经历",
-      detail: "论文、翻译与英语竞赛获奖。",
+      detail: "IPO、PE/VC、学术及其他项目。",
     },
     cv: {
       title: "简历",
@@ -64,37 +61,33 @@ export const zhHansMessages = {
   },
   about: {
     heroEyebrow: "关于",
-    heroTitle: "个人介绍",
+    heroTitle: "关于",
     heroDesc: "黎杰（Jay Lai）· 华东政法大学",
     biography: "个人简介",
     intro:
-      "你好，我是黎杰（Jay Lai），法学专业在读，主要关注香港、中国内地与美国的资本市场。课业与交易项目之外，我持续关注音乐与电影，也常以烹饪作为调剂。",
-    bio: "我就读于华东政法大学法学本科（专业成绩 89/100），并在竞天公诚、大成（南宁）等实习中积累港股 IPO 与资本市场相关经验。",
-    selfEval: [
-      "工作投入度高，获得带教、客户及中介机构同事的积极评价。",
-      "与发行人、保荐人、审计师及其他中介沟通协作顺畅。",
-      "对香港资本市场及 IPO 业务有长期兴趣，可适应高强度项目节奏。",
-    ],
+      "你好，我是黎杰，现为法科生在读。求学期间，我的研究重心主要聚焦于资本市场领域，重点关注港股 IPO、私募股权投资，以及内地、中国香港与美国三地跨境资本流动及制度规则衔接问题。",
+    bio:
+      "于我而言，资本市场业务与国际商事仲裁是同一跨境商事脉络的两个面向：国际商事仲裁聚焦事后争议解决，核心围绕准据法适用、仲裁程序开展与跨境裁决执行展开；而 IPO、私募股权投资则更多落脚于前端融资与交易架构设计。",
+    personalBefore:
+      "除却专业领域，我的个人爱好包括音乐、影视、旅行与美食，相关个人爱好详见本站",
+    personalAfter: "。",
     atAGlance: "概览",
     credEducation: "教育",
-    credEducationVal:
-      "华东政法大学 · 法学本科（2023.09 — 2027.06）· 专业成绩 89/100",
+    credEducationVal: "华东政法大学 · 法学本科（2023.09 — 2027.06）",
     credCourses: "主修课程",
     credCoursesVal:
       "证券法、公司法、保险法、民法、国际商事仲裁、知识产权法、民事诉讼法",
     credLanguages: "语言",
-    credLanguagesVal:
-      "普通话、粤语、英语（雅思 7.5：阅读 8.5，听力 8.0，写作 7.0，口语 7.0）",
-    credTarget: "求职方向",
-    credTargetVal: "法律实习生（IPO 方向）",
-    achievementsLink: "获奖经历",
-    achievementsLinkDesc: "查看竞赛与论文获奖 →",
+    credLanguagesVal: "普通话、粤语、英语，雅思 7.5",
+    credTarget: "目标方向",
+    credTargetVal: "境内外资本市场、私募投融资、国际商事仲裁",
+    credInterests: "兴趣爱好",
+    credInterestsVal: "音乐、影视、旅行、美食",
+    cvLink: "简历",
+    cvLinkDesc: "下载完整中文简历 PDF，含教育、实习与联系方式 →",
   },
   experience: {
-    heroEyebrow: "经历",
-    heroTitle: "实习经历",
-    heroDesc:
-      "竞天公诚上海证券业务部 · 大成（南宁）— 不含客户保密信息的项目概述。",
+    heroTitle: "精选经历",
     items: [
       {
         period: "2025.09 — 2026.03",
@@ -113,34 +106,38 @@ export const zhHansMessages = {
         firm: "北京大成（南宁）律师事务所",
         role: "资本市场专业组实习生",
         bullets: [
-          "非诉：参与 1 个 A 股 IPO 及 1 个港股 IPO，独立起草及审核尽调报告章节；审查 20 余份并购、投融资及常年顾问合同。",
+          "资本市场：参与 1 个 A 股 IPO 及 1 个港股 IPO，独立起草及审核尽调报告章节；审查 20 余份并购、投融资及常年顾问合同。",
           "诉讼：参与涉外不动产纠纷，独立起草起诉状、答辩状、质证意见、类案检索及证据清单等文书。",
         ],
       },
     ],
+    projectsLink: "项目与研究",
+    projectsLinkDesc: "IPO、PE/VC、学术及其他项目 →",
+    hiddenInternshipsNoteBefore:
+      "受篇幅与相关性所限，部分实习经历未在此列出。如需了解更多过往经历，欢迎通过",
+    hiddenInternshipsNoteAfter: "与我联系。",
   },
   projects: {
-    heroEyebrow: "项目",
-    heroTitle: "项目与研究",
-    heroDesc: "来自实习与课程研究的港股项目及法律研究。",
+    heroTitle: "项目",
     groups: [
       {
-        heading: "香港 IPO 项目",
+        heading: "法律项目",
         items: [
           {
-            title: "多行业港股上市尽调",
+            title: "上市项目",
             description:
-              "在竞天公诚参与 30 余个港股 IPO 尽调及合规核查，跨行业覆盖并与发行人、保荐人及中介机构协作。",
+              "参与 30 余个港股上市项目的尽职调查、披露协调及与保荐人、中介机构协作，覆盖科技、医疗、矿产、消费、食品及制造业等。",
+            showcase: "ipo",
           },
           {
-            title: "加期第三方尽职调查",
-            description:
-              "作为主要协调人独立负责某项目加期 TPDD，统筹访谈、核查跟进、底稿整理及项目推进。",
+            title: "私募/风投",
+            description: "参与 10 余个私募股权投资/风险投资相关交易项目。",
           },
           {
-            title: "Printer Session 与穿行测试",
+            title: "其他",
             description:
-              "参与 Printer Session 及销售、采购、存货、资金流转等穿行测试，验证业务真实性与内控有效性。",
+              "参与多类项目并取得显著的成果，包括虹桥机场宠物候机厅的落成等。",
+            showcase: "others",
           },
         ],
       },
@@ -148,71 +145,88 @@ export const zhHansMessages = {
         heading: "法律研究",
         items: [
           {
-            title: "合并仲裁问题研究",
+            title: "资本市场",
+            paperLabel: "论文",
+            papers: [
+              "《论双重上市 WVR 架构境内适用的比例限制豁免》",
+              "《论公司资本维持原则于回购条款之约束效力》",
+              "《新公司法立法模式视角下类别股制度完善》",
+            ],
             description:
-              "12000+ 字《我国合并仲裁的问题研究》，获华东政法大学本科生学术论文竞赛三等奖。",
+              "持续关注各地公司法的前沿变动，聚焦于上市、类别股两大板块。\n\n在 2025 年，根据实习经历，我以「论双重上市 WVR 架构境内适用的比例限制豁免」为主题写论文，探讨美国、香港、中国股市对于同股不同权架构规定及放开比例限制并实现部分豁免的可能性。我的部分观点在 2026 年 7 月得到实践的支持，香港联合交易所将 10:1 的比例限制放宽到 20:1。",
           },
           {
-            title: "上市可行性及行业分析",
+            title: "国际商事仲裁",
+            paperLabel: "论文",
+            papers: [
+              "《我国合并仲裁的问题研究》",
+              "《国际商事仲裁非法证据的可采性》",
+            ],
             description:
-              "审阅审计报告及同行业上市公司情况，独立完成上市可能性分析及 Pitch Book 行业研究。",
+              "除资本市场外，我也格外关注国际商事仲裁的实践问题，深入学习国际商事仲裁、国际私法、国际商事仲裁案例研习、国际民商事争议解决等课程并都取得满绩。",
           },
         ],
       },
     ],
-  },
-  achievements: {
-    heroEyebrow: "获奖",
-    heroTitle: "获奖经历",
-    heroDesc: "学术论文与全国英语类竞赛获奖记录。",
-    items: [
-      {
-        year: "2024",
-        title: "华东政法大学本科生学术论文竞赛三等奖",
-        detail: "论文《我国合并仲裁的问题研究》12000+ 字",
-      },
-      {
-        year: "2024",
-        title: "《英语世界》杯全国大学生翻译大赛全国一等奖",
-        detail: "英汉翻译",
-      },
-      {
-        year: "2024",
-        title: "全国大学生英语戏剧节全国二等奖",
-        detail: "",
-      },
-    ],
+    interestsLink: "兴趣爱好",
+    interestsLinkDesc: "音乐、影视、旅行、美食等 →",
   },
   cv: {
-    heroEyebrow: "简历",
     heroTitle: "简历",
-    heroDesc: "下载完整中文简历 PDF，含教育、实习与联系方式。",
-    sectionTitle: "简历文件",
-    sectionLead: "以下为要点摘要；以 PDF 为准。",
+    sectionIntro:
+      "下载完整中文简历 PDF，含教育、实习与联系方式。",
     highlights: [
       "华东政法大学 · 专业成绩 89/100",
       "竞天公诚上海分所 — 30 余个港股 IPO 项目",
       "大成（南宁）— A 股/港股 IPO、并购合同及诉讼文书",
-      "雅思 7.5 · 普通话、粤语、英语",
+      "普通话、粤语；雅思 7.5（阅读 8.5，听力 8，写作 7，口语 7）",
     ],
+    experienceLink: "经历",
+    experienceLinkDesc: "竞天公诚 · 大成（南宁）→",
     cvPageLink: "简历页",
   },
   contact: {
-    heroEyebrow: "联系",
-    heroTitle: "联系方式",
-    heroDesc: "欢迎国际律所、猎头与职业联系人来信。",
-    directTitle: "直接联系",
-    directBody:
-      "求职方向为法律实习生（IPO 方向）。欢迎邮件或电话联系，我会在数个工作日内回复。",
-    detailsTitle: "联系信息",
-    locationLabel: "所在地",
-    location: "上海 · 可接受出差及香港相关业务",
-    cvLabel: "简历",
+    heroTitle: "联系",
+    detailsTitle: "联系方式",
+    asideBody: "欢迎随时联系，我会尽快回复。",
+    locationLabel: "常驻地",
+    location: "上海（目前），可接受香港及国际相关机会",
   },
   interests: {
     heroEyebrow: "兴趣",
     heroTitle: "兴趣爱好",
-    heroDesc: "音乐、电影、烹饪等——内容稍后补充。",
-    placeholder: "这一板块正在准备中，敬请期待。",
+    wheelHint: "在圆环上滑动或滚动，也可点上下按钮切换主题",
+    themePrev: "上一个主题",
+    themeNext: "下一个主题",
+    photoScrollHint: "滑动切换照片",
+    contactLink: "联系",
+    contactLinkDesc: "Jaylai2005@outlook.com · 183 7744 2157 →",
+    themes: {
+      travel: {
+        title: "旅行",
+        description:
+          "我很喜欢四处旅行，特别是独身旅行。我习惯为一切做好细致的计划，但旅途中意外的收获也总让我惊喜。每一次探索新的地方，都让我拓展视野，感受多元文化，发现世界的丰富与美好。",
+      },
+      music: {
+        title: "音乐",
+        description:
+          "可能是父母对港乐的热爱，也许是 JPOP 的旋律，抑或是摇滚的精神，也可能是华语音乐的细腻，我深爱风格各异的音乐，并深深为音乐痴迷。音乐收纳万千情绪，借形形色色的曲风传达，无论何时何地，我总能在音乐中找到共鸣。",
+      },
+      cooking: {
+        title: "吃吃吃",
+        description:
+          "我大概是个「吃货」——走到哪，就想尝尝那里的特色。粤菜是我心里的第一名：镬气、原味、一碟一碟的讲究，我都爱。闲下来也会自己下厨，试着把家常粤菜做出点温度。",
+      },
+      film: {
+        title: "电影",
+        description:
+          "我爱看电影，特别钟情港片和好莱坞作品。张曼玉完全是我的女神，我最爱最爱《花样年华》。电影总能以画面、音乐、叙事等各种角度结构生活中的微妙情愫或至简之道。",
+      },
+      mystery: {
+        title: "？",
+        description:
+          "留下一些空白，希望在相处中，能让您了解到更多的我，更多的 Jay……",
+      },
+    },
   },
 };

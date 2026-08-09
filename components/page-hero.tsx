@@ -1,7 +1,7 @@
 import { serifClass } from "@/lib/site-nav";
 
 type PageHeroProps = {
-  eyebrow: string;
+  eyebrow?: string;
   title: React.ReactNode;
   description?: string;
   large?: boolean;
@@ -30,9 +30,11 @@ export function PageHero({
           large ? "py-24 sm:py-32 lg:py-40" : "py-16 sm:py-20 lg:py-24"
         }`}
       >
-        <p className="mb-4 text-xs font-medium uppercase tracking-[0.35em] text-white/70 sm:text-sm">
-          {eyebrow}
-        </p>
+        {eyebrow ? (
+          <p className="mb-4 text-xs font-medium uppercase tracking-[0.35em] text-white/70 sm:text-sm">
+            {eyebrow}
+          </p>
+        ) : null}
         <h1
           id="page-hero-heading"
           className={`${serifClassName} ${

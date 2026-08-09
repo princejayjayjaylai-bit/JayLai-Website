@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ExploreRibbon } from "@/components/explore-ribbon";
 import { HomeHero, ProfilePhotoCard } from "@/components/profile-media";
 import { getExploreRibbonItems } from "@/lib/explore-sections";
@@ -30,6 +31,18 @@ export default async function Home() {
               <p className="mt-8 text-base leading-relaxed text-neutral-700 sm:text-lg sm:leading-8">
                 {m.home.intro}
               </p>
+              {m.home.introFollowUpBefore ? (
+                <p className="mt-6 text-base leading-relaxed text-neutral-700 sm:text-lg sm:leading-8">
+                  {m.home.introFollowUpBefore}
+                  <Link
+                    href="/contact"
+                    className="font-medium text-[#0c2340] underline decoration-[#0c2340]/30 underline-offset-4 hover:decoration-[#0c2340]"
+                  >
+                    {m.nav.contact}
+                  </Link>
+                  {m.home.introFollowUpAfter}
+                </p>
+              ) : null}
             </div>
           </div>
         </div>

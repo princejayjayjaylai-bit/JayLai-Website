@@ -33,7 +33,7 @@ export function HistoryNav({
       </button>
       <Link
         href="/"
-        className="flex h-10 min-w-10 items-center justify-center rounded-sm px-2 text-xs font-semibold uppercase tracking-wider text-[#0c2340] transition-colors hover:bg-[#0c2340]/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0c2340]/40 sm:h-11 sm:min-w-11 sm:px-2.5 sm:text-[11px]"
+        className="flex h-10 min-w-10 items-center justify-center rounded-sm px-2 text-sm font-semibold text-[#0c2340] transition-colors hover:bg-[#0c2340]/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0c2340]/40 sm:h-11 sm:min-w-11 sm:px-3 sm:text-base"
         aria-label={homeLabel}
       >
         {homeLabel}

@@ -3,7 +3,6 @@ export const enMessages = {
     about: "About",
     experience: "Experience",
     projects: "Projects",
-    achievements: "Achievements",
     cv: "CV",
     interests: "Interests",
     contact: "Contact",
@@ -26,7 +25,10 @@ export const enMessages = {
     tagline: "Law Student | Capital Markets",
     targetRole: "Legal Intern (Hong Kong IPO)",
     intro:
-      "Hello—I’m Jay Lai, a law student focused on capital markets in Hong Kong, mainland China, and the United States. Outside coursework and live deals, I follow music and cinema closely, and I cook when I want something hands-on away from the screen.",
+      "Hello—I'm Jay Lai, a law student focused on capital markets across Hong Kong, mainland China, and the United States, with a steady interest in making the underlying facts incontrovertible where it counts—including on Hong Kong listing work in practice. I'm equally drawn to international commercial arbitration as the dispute side of that same cross-border picture. Apart from work, I'm also obsessed with a variety of hobbies involving music, film, and cooking; see Interests on this site for more.",
+    introFollowUpBefore:
+      "To learn more about me, explore the site and get in touch via ",
+    introFollowUpAfter: ".",
     introduction: "Introduction",
     explore: "Explore",
     exploreScrollNext: "Scroll to next section",
@@ -43,11 +45,7 @@ export const enMessages = {
     },
     projects: {
       title: "Projects",
-      detail: "HK listing diligence, TPDD, printer sessions, and research.",
-    },
-    achievements: {
-      title: "Achievements",
-      detail: "Thesis, translation, and English competition honours.",
+      detail: "IPO, PE/VC, academic work, and other projects.",
     },
     cv: {
       title: "CV",
@@ -68,34 +66,31 @@ export const enMessages = {
     heroDesc: "Jay Lai (黎杰) · East China University of Political Science and Law",
     biography: "Biography",
     intro:
-      "Hello—I’m Jay Lai, a law student focused on capital markets in Hong Kong, mainland China, and the United States. Outside coursework and live deals, I follow music and cinema closely, and I cook when I want something hands-on away from the screen.",
+      "Hello—I’m Jay Lai, an LL.B. student at East China University of Political Science and Law. Most of what I read—for classes or on my own—comes back to IPOs and private markets, and to how mainland China, Hong Kong, and the United States fit together as places to raise and move capital.",
     bio:
-      "I am an LL.B. candidate at East China University of Political Science and Law (GPA 89/100), with internship experience in Hong Kong IPO work and broader capital markets practice.",
-    selfEval: [
-      "Strong work ethic with consistently positive feedback from supervisors, clients, and other advisors.",
-      "Effective coordination with issuers, sponsors, auditors, and other intermediaries on live transactions.",
-      "Genuine long-term interest in Hong Kong capital markets and IPO practice; comfortable in intensive deal rhythms.",
-    ],
+      "For me, capital markets practice and international commercial arbitration are two facets of the same cross-border commercial thread: arbitration concentrates on post-dispute resolution—governing law, arbitral procedure, and cross-border enforcement—while IPOs and private equity belong chiefly to upstream financing and deal structuring.",
+    personalBefore:
+      "Beyond those subjects, my personal interests include music, film, travel, and food; see ",
+    personalAfter: " on this site for more.",
     atAGlance: "At a glance",
     credEducation: "Education",
     credEducationVal:
-      "East China University of Political Science and Law · Bachelor of Laws (LL.B.) (Sep 2023 — Jun 2027) · GPA 89/100",
+      "East China University of Political Science and Law · Bachelor of Laws (LL.B.) (Sep 2023 — Jun 2027)",
     credCourses: "Courses",
     credCoursesVal:
       "Securities Law, Company Law, Insurance Law, Civil Law, International Commercial Arbitration, Intellectual Property Law, Civil Procedure",
     credLanguages: "Languages",
-    credLanguagesVal:
-      "Mandarin, Cantonese, and English (IELTS 7.5 — Reading 8.5, Listening 8.0, Writing 7.0, Speaking 7.0)",
-    credTarget: "Target role",
-    credTargetVal: "Legal Intern (Hong Kong IPO)",
-    achievementsLink: "Achievements",
-    achievementsLinkDesc: "View honours and competitions →",
+    credLanguagesVal: "Mandarin, Cantonese, and English — IELTS 7.5",
+    credTarget: "Target focus",
+    credTargetVal:
+      "Capital markets (mainland China and Hong Kong), private investment and financing, and international commercial arbitration",
+    credInterests: "Interests",
+    credInterestsVal: "Music, film, travel, and food",
+    cvLink: "CV",
+    cvLinkDesc: "Download the full résumé PDF — education, experience, and contact details →",
   },
   experience: {
-    heroEyebrow: "Experience",
-    heroTitle: "Internships",
-    heroDesc:
-      "Jingtian & Gongcheng (securities, Shanghai) and Dentons (Nanning)—summarized without client-confidential detail.",
+    heroTitle: "Selected Experiences",
     items: [
       {
         period: "Sep 2025 — Mar 2026",
@@ -116,35 +111,39 @@ export const enMessages = {
         firm: "Dentons (Nanning) Law Firm",
         role: "Intern, Capital Markets Practice Group",
         bullets: [
-          "Non-contentious: 1 PRC IPO and 1 HKEX IPO—drafting and reviewing due diligence report chapters.",
+          "Capital market: 1 PRC IPO and 1 HKEX IPO—drafting and reviewing due diligence report chapters.",
           "Reviewed 20+ M&A, investment, financing, and general advisory contracts; drafted governance documents for a major listed company.",
           "Contentious: foreign-related real estate dispute—pleadings, evidence lists, case research memos, and trial submissions drafted independently.",
         ],
       },
     ],
+    projectsLink: "Projects",
+    projectsLinkDesc: "IPO, PE/VC, academic work, and other projects →",
+    hiddenInternshipsNoteBefore:
+      "Some internships are not listed here due to space and relevance. To learn more about previous experience, please reach out via ",
+    hiddenInternshipsNoteAfter: ".",
   },
   projects: {
-    heroEyebrow: "Projects",
-    heroTitle: "Selected work",
-    heroDesc: "HK IPO projects and legal research from internships and coursework.",
+    heroTitle: "Selected Projects",
     groups: [
       {
-        heading: "HK IPO projects",
+        heading: "Legal projects",
         items: [
           {
-            title: "Multi-sector HKEX listing diligence",
+            title: "IPO",
             description:
               "Supported 30+ Hong Kong listing candidates through diligence, disclosure alignment, and advisor coordination—technology, healthcare, mining, consumer, and manufacturing.",
+            showcase: "ipo",
           },
           {
-            title: "Extended TPDD coordination",
-            description:
-              "Led end-to-end extended third-party diligence for a live listing—interview scheduling, issue tracking, working papers, and stakeholder communication.",
+            title: "PE/VC",
+            description: "Participated in 10+ PE/VC deals.",
           },
           {
-            title: "Printer session & walkthrough testing",
+            title: "Others",
             description:
-              "Participated in printer sessions and business walkthroughs on revenue, procurement, inventory, and treasury flows to validate controls and business substance.",
+              "Took part in various projects with notable outcomes, including the Hongqiao Airport pet lounge and more.",
+            showcase: "others",
           },
         ],
       },
@@ -152,75 +151,89 @@ export const enMessages = {
         heading: "Legal research",
         items: [
           {
-            title: "Consolidated arbitration thesis",
+            title: "Capital markets",
+            paperLabel: "Papers",
+            papers: [
+              "On proportional-limit waivers for dual-listed WVR structures in mainland China",
+              "On capital maintenance constraints on share repurchase terms",
+              "Improving class shares under the new Company Law legislative model",
+            ],
             description:
-              "12,000+ word academic thesis on consolidated arbitration in China; third prize, ECUPL undergraduate thesis competition.",
+              "I follow company-law developments across jurisdictions, with a focus on listing and class shares.\n\nIn 2025, drawing on internship work, I wrote on proportional limits and partial waivers for weighted voting rights across the US, Hong Kong, and mainland China. Some of my arguments received practical support in July 2026 when HKEX relaxed the 10:1 cap to 20:1.",
           },
           {
-            title: "Listing feasibility & sector analysis",
+            title: "International commercial arbitration",
+            paperLabel: "Papers",
+            papers: [
+              "Consolidated arbitration in China",
+              "Admissibility of illegally obtained evidence in international commercial arbitration",
+            ],
             description:
-              "Independent listing feasibility memos and pitch-book research drawing on audit reports, qualifications, and listed comparables.",
+              "Beyond capital markets, I focus on arbitration in practice and earned full marks in International Commercial Arbitration, Private International Law, arbitration case studies, and cross-border dispute resolution.",
           },
         ],
       },
     ],
-  },
-  achievements: {
-    heroEyebrow: "Achievements",
-    heroTitle: "Honours & competitions",
-    heroDesc: "Academic thesis and national English competitions.",
-    items: [
-      {
-        year: "2024",
-        title: "Third Prize, ECUPL Undergraduate Academic Thesis Competition",
-        detail:
-          "Research on the Problems of Consolidated Arbitration in China (12,000+ words)",
-      },
-      {
-        year: "2024",
-        title: "First Prize, National College Students Translation Competition",
-        detail: "English–Chinese translation",
-      },
-      {
-        year: "2024",
-        title: "Second Prize, National College Students English Drama Festival",
-        detail: "",
-      },
-    ],
+    interestsLink: "Interests",
+    interestsLinkDesc: "Music, film, travel, cooking, and more →",
   },
   cv: {
-    heroEyebrow: "CV",
-    heroTitle: "Résumé",
-    heroDesc:
-      "Download the full CV (PDF), including education, internships, and contact details.",
-    sectionTitle: "CV PDF",
-    sectionLead: "Highlights below; the PDF is the authoritative version.",
+    heroTitle: "CV",
+    sectionIntro:
+      "Download the full CV (PDF), including education, internships, and contact details",
     highlights: [
       "East China University of Political Science and Law · GPA 89/100",
       "Jingtian & Gongcheng — 30+ HKEX IPO projects (securities, Shanghai)",
       "Dentons (Nanning) — PRC & HK IPO, M&A contracts, litigation drafting",
-      "IELTS 7.5 · Mandarin, Cantonese, English",
+      "Mandarin, Cantonese; IELTS 7.5 (Reading 8.5, Listening 8, Writing 7, Speaking 7)",
     ],
+    experienceLink: "Experience",
+    experienceLinkDesc: "Jingtian & Gongcheng · Dentons Nanning →",
     cvPageLink: "CV page",
   },
   contact: {
-    heroEyebrow: "Contact",
     heroTitle: "Contact",
-    heroDesc:
-      "International law firms, legal recruiters, and professional contacts welcome.",
-    directTitle: "Direct inquiry",
-    directBody:
-      "Seeking legal intern (Hong Kong IPO) opportunities. Email or phone works best; I aim to reply within a few business days.",
-    detailsTitle: "Details",
-    locationLabel: "Location",
+    detailsTitle: "Contact me by",
+    asideBody: "Feel free to reach out anytime—I aim to reply ASAP.",
+    locationLabel: "Base",
     location:
-      "Shanghai, China · open to Hong Kong and international roles",
-    cvLabel: "CV",
+      "Shanghai (currently), open to Hong Kong and international roles",
   },
   interests: {
     heroEyebrow: "Interests",
     heroTitle: "Interests",
-    heroDesc: "Music, film, cooking, and more — to be updated.",
-    placeholder: "This section is being prepared. Check back soon.",
+    wheelHint: "Swipe or scroll on the ring, or use the arrows to switch themes",
+    themePrev: "Previous theme",
+    themeNext: "Next theme",
+    photoScrollHint: "Swipe photos",
+    contactLink: "Contact",
+    contactLinkDesc: "Jaylai2005@outlook.com · 183 7744 2157 →",
+    themes: {
+      travel: {
+        title: "Travel",
+        description:
+          "Travelling holds a special place in my heart, and I am particularly drawn to solo journeys. While I meticulously map out every detail prior to departure, I remain open-hearted toward unforeseen encounters along the way. Venturing into unfamiliar lands broadens my perspective, affording me precious chances to witness human diversity, immerse myself in disparate cultural fabrics, and behold the full breadth of nature’s landscapes.",
+      },
+      music: {
+        title: "Music",
+        description:
+          "From the Cantopop fondness inherited from my parents, to J-POP melodies, rock-and-roll spirit and the subtlety of Mandarin-language tracks, music across genres carries immense allure. It stores multitudes of feelings and builds wordless cross-linguistic resonance. Diverse musical styles lend emotional weight to ordinary days.",
+      },
+      cooking: {
+        title: "Eating",
+        description:
+          "Few pleasures beat eating well on the road. Every destination is a chance to try local specialties — street food, regional classics, whatever a place is proud of. Cantonese cuisine sits at the top of the list: wok hei, clean flavors, and the quiet care in every dish. The same spirit carries into the kitchen at home, where familiar Cantonese recipes turn into small, hands-on rituals.",
+      },
+      film: {
+        title: "Film",
+        description:
+          "Countless compelling narratives unfold through moving images, with Hong Kong and Hollywood cinema forming the core of my viewing experience. Maggie Cheung’s performances hold immense appeal, and In the Mood for Love occupies an irreplaceable place among my favourites. Quiet, fluid emotions alongside the distinctive aura of a bygone era unfold gently across its frames.",
+      },
+      mystery: {
+        title: "?",
+        description:
+          "I'd be genuinely glad if you are willing to get a deeper insight into my life. Sincerely look forward to building a close friendship with you >v<",
+      },
+    },
   },
 } as const;

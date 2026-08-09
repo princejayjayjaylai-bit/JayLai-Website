@@ -1,4 +1,3 @@
-import { DesktopPet } from "@/components/desktop-pet";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { getLocale } from "@/lib/i18n/get-locale";
@@ -16,7 +15,6 @@ export async function SiteShell({ children }: { children: React.ReactNode }) {
       <SiteHeader locale={locale} messages={messages} />
       <main className="min-w-0 flex-1">{children}</main>
       <SiteFooter locale={locale} messages={messages} />
-      <DesktopPet />
     </div>
   );
 }

@@ -1,5 +1,13 @@
 import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
 import { PageHero } from "@/components/page-hero";
+import {
+  experienceLandmarkColumnClassName,
+  experienceLandmarkLayout,
+  experienceLandmarkPaths,
+  experienceLandmarkSizes,
+} from "@/lib/experience-landmarks";
 import { getLocale } from "@/lib/i18n/get-locale";
 import { localeSerifClass } from "@/lib/i18n/locale-styles";
 import { getMessages } from "@/lib/i18n/messages";
@@ -13,40 +21,106 @@ export default async function ExperiencePage() {
   const m = getMessages(locale);
   const e = m.experience;
   const serif = localeSerifClass(locale);
+  const layout = experienceLandmarkLayout;
 
   return (
     <>
-      <PageHero
-        eyebrow={e.heroEyebrow}
-        title={e.heroTitle}
-        description={e.heroDesc}
-        serifClassName={serif}
-      />
+      <PageHero title={e.heroTitle} serifClassName={serif} />
 
       <section className="bg-white">
         <div className="mx-auto max-w-6xl px-6 py-16 sm:px-8 lg:px-10 lg:py-24">
-          <ol className="relative border-l border-neutral-200 pl-8 sm:pl-10">
-            {e.items.map((item) => (
-              <li key={item.firm} className="relative pb-16 last:pb-0">
-                <span
-                  className="absolute -left-[5px] top-1.5 h-2.5 w-2.5 rounded-full bg-[#0c2340]"
-                  aria-hidden
-                />
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-neutral-500">
-                  {item.period}
-                </p>
-                <h2 className={`${serif} mt-3 text-xl font-semibold text-neutral-950 sm:text-2xl`}>
-                  {item.firm}
-                </h2>
-                <p className="mt-2 text-sm text-neutral-600">{item.role}</p>
-                <ul className="mt-6 list-disc space-y-2 pl-5 text-sm leading-relaxed text-neutral-700">
-                  {item.bullets.map((highlight) => (
-                    <li key={highlight}>{highlight}</li>
-                  ))}
-                </ul>
-              </li>
-            ))}
+          <ol className="space-y-16">
+            {e.items.map((item, index) => {
+              const isPearl = index === 0;
+              const landmark = isPearl ? layout.pearl : layout.nanning;
+
+              return (
+                <li key={item.firm}>
+                  <div className="flex items-stretch gap-6 sm:gap-10">
+                    <div className="min-w-0 flex-1">
+                      <h2
+                        className={`${serif} text-xl font-semibold text-neutral-950 sm:text-2xl`}
+                      >
+                        {item.firm}
+                      </h2>
+                      <p className="mt-2 text-base text-neutral-600 sm:text-lg">
+                        {item.role}
+                      </p>
+                      <p className="mt-2 text-sm text-neutral-500">
+                        {item.period}
+                      </p>
+                    </div>
+                    <div
+                      className={`${experienceLandmarkColumnClassName} ${landmark.columnClassName}`}
+                    >
+                      <div className={landmark.innerClassName}>
+                        <Image
+                          src={
+                            experienceLandmarkPaths[index] ??
+                            experienceLandmarkPaths[0]
+                          }
+                          alt=""
+                          unoptimized
+                          width={
+                            (
+                              experienceLandmarkSizes[index] ??
+                              experienceLandmarkSizes[0]
+                            ).width
+                          }
+                          height={
+                            (
+                              experienceLandmarkSizes[index] ??
+                              experienceLandmarkSizes[0]
+                            ).height
+                          }
+                          className={landmark.imageClassName}
+                          style={
+                            "imageStyle" in landmark
+                              ? landmark.imageStyle
+                              : { width: "auto" }
+                          }
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <ul className="mt-6 space-y-3 text-sm leading-relaxed text-neutral-700 sm:text-base">
+                    {item.bullets.map((highlight) => (
+                      <li key={highlight} className="flex gap-3">
+                        <span
+                          className="mt-2 h-1.5 w-1.5 shrink-0 bg-[#0c2340]"
+                          aria-hidden
+                        />
+                        <span>{highlight}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </li>
+              );
+            })}
           </ol>
+          <p className="mt-12 max-w-3xl text-sm leading-relaxed text-neutral-950 sm:text-base">
+            {e.hiddenInternshipsNoteBefore}
+            <Link
+              href="/contact"
+              className="font-medium text-[#0c2340] underline decoration-[#0c2340]/30 underline-offset-4 hover:decoration-[#0c2340]"
+            >
+              {m.nav.contact}
+            </Link>
+            {e.hiddenInternshipsNoteAfter}
+          </p>
+        </div>
+      </section>
+
+      <section className="border-t border-neutral-200 bg-neutral-50/30">
+        <div className="mx-auto max-w-6xl px-6 py-12 sm:px-8 lg:px-10 lg:py-14">
+          <Link href="/projects" className="group block max-w-xl">
+            <p
+              className={`${serif} text-lg font-semibold text-[#0c2340] group-hover:underline`}
+            >
+              {e.projectsLink}
+            </p>
+            <p className="mt-2 text-sm text-neutral-600">{e.projectsLinkDesc}</p>
+          </Link>
         </div>
       </section>
     </>

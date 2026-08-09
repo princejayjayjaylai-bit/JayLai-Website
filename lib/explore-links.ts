@@ -19,15 +19,8 @@ export const exploreLinks = [
     href: "/projects",
     title: "Projects",
     titleZh: "项目与研究",
-    detailEn: "HK listing diligence, TPDD, printer sessions, and research.",
-    detailZh: "港股尽调、TPDD、Printer Session 及研究项目。",
-  },
-  {
-    href: "/achievements",
-    title: "Achievements",
-    titleZh: "获奖经历",
-    detailEn: "Thesis, translation, and English competition honours.",
-    detailZh: "论文、翻译与英语竞赛获奖。",
+    detailEn: "IPO, PE/VC, academic work, and other projects.",
+    detailZh: "IPO、PE/VC、学术及其他项目。",
   },
   {
     href: "/cv",

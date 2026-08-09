@@ -61,32 +61,6 @@ export const profile = {
   ],
   selfEvaluationZh:
     "工作能力突出，沟通协调能力良好；对香港资本市场及 IPO 业务具有浓厚兴趣，可适应高强度项目节奏。",
-  achievements: [
-    {
-      year: "2024",
-      titleEn:
-        "Third Prize, ECUPL Undergraduate Academic Thesis Competition",
-      titleZh: "华东政法大学本科生学术论文竞赛三等奖",
-      detailEn:
-        "Research on the Problems of Consolidated Arbitration in China (12,000+ words)",
-      detailZh: "论文《我国合并仲裁的问题研究》12000+ 字",
-    },
-    {
-      year: "2024",
-      titleEn: "First Prize, National College Students Translation Competition",
-      titleZh: "《英语世界》杯全国大学生翻译大赛全国一等奖",
-      detailEn: "English–Chinese translation",
-      detailZh: "",
-    },
-    {
-      year: "2024",
-      titleEn:
-        "Second Prize, National College Students English Drama Festival",
-      titleZh: "全国大学生英语戏剧节全国二等奖",
-      detailEn: "",
-      detailZh: "",
-    },
-  ],
 } as const;
 
 export const internships = [
@@ -169,20 +143,20 @@ export const projectGroups = [
     headingZh: "法律研究",
     items: [
       {
-        titleEn: "Consolidated arbitration thesis",
-        titleZh: "合并仲裁问题研究",
+        titleEn: "Capital markets",
+        titleZh: "资本市场",
         descriptionEn:
-          "12,000+ word academic thesis on consolidated arbitration in China; third prize, ECUPL undergraduate thesis competition.",
+          "Thesis work on WVR proportional limits, capital maintenance in repurchases, and class shares under the new Company Law; 2025 paper on dual-listed WVR waivers aligned with HKEX’s July 2026 20:1 cap change.",
         descriptionZh:
-          "12000+ 字《我国合并仲裁的问题研究》，获华东政法大学本科生学术论文竞赛三等奖。",
+          "《论双重上市 WVR 架构境内适用的比例限制豁免》等三篇论文方向；持续关注上市与类别股；2025 年 WVR 比例限制豁免论文，部分观点获 2026 年 7 月 HKEX 放宽至 20:1 的实践支持。",
       },
       {
-        titleEn: "Listing feasibility & sector analysis",
-        titleZh: "上市可行性及行业分析",
+        titleEn: "International commercial arbitration",
+        titleZh: "国际商事仲裁",
         descriptionEn:
-          "Independent listing feasibility memos and pitch-book research drawing on audit reports, qualifications, and listed comparables.",
+          "Consolidated arbitration and illegally obtained evidence in ICA; full marks in arbitration, PIL, case studies, and cross-border dispute resolution.",
         descriptionZh:
-          "审阅审计报告及同行业上市公司情况，独立完成上市可能性分析及 Pitch Book 行业研究。",
+          "《我国合并仲裁的问题研究》《国际商事仲裁非法证据的可采性》；国际商事仲裁、国际私法等课程满绩。",
       },
     ],
   },

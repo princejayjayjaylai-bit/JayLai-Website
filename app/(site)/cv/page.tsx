@@ -19,25 +19,15 @@ export default async function CvPage() {
 
   return (
     <>
-      <PageHero
-        eyebrow={c.heroEyebrow}
-        title={c.heroTitle}
-        description={c.heroDesc}
-        serifClassName={serif}
-      />
+      <PageHero title={c.heroTitle} serifClassName={serif} />
 
       <section className="bg-white">
         <div className="mx-auto max-w-6xl px-6 py-16 sm:px-8 lg:px-10 lg:py-24">
           <div className="grid gap-12 lg:grid-cols-[minmax(0,240px)_1fr] lg:gap-16">
             <ProfilePhotoCard variant="formal" locale={locale} />
             <div>
-              <h2
-                className={`${serif} text-2xl font-semibold text-[#0c2340] sm:text-3xl`}
-              >
-                {c.sectionTitle}
-              </h2>
-              <p className="mt-6 text-base leading-relaxed text-neutral-700 sm:text-lg">
-                {c.sectionLead}
+              <p className="text-base leading-relaxed text-neutral-700 sm:text-lg">
+                {c.sectionIntro}
               </p>
               <ul className="mt-8 space-y-3 text-sm leading-relaxed text-neutral-700 sm:text-base">
                 {c.highlights.map((line) => (
@@ -57,15 +47,22 @@ export default async function CvPage() {
                 >
                   {m.ui.openInBrowser}
                 </a>
-                <Link
-                  href="/contact"
-                  className="inline-flex h-12 items-center justify-center rounded-sm border border-neutral-300 px-8 text-sm font-semibold uppercase tracking-wider text-neutral-700 transition-colors hover:bg-neutral-50"
-                >
-                  {m.ui.contact}
-                </Link>
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="border-t border-neutral-200 bg-neutral-50/30">
+        <div className="mx-auto max-w-6xl px-6 py-12 sm:px-8 lg:px-10 lg:py-14">
+          <Link href="/experience" className="group block max-w-xl">
+            <p
+              className={`${serif} text-lg font-semibold text-[#0c2340] group-hover:underline`}
+            >
+              {c.experienceLink}
+            </p>
+            <p className="mt-2 text-sm text-neutral-600">{c.experienceLinkDesc}</p>
+          </Link>
         </div>
       </section>
     </>

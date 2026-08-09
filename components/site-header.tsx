@@ -1,15 +1,8 @@
-import Link from "next/link";
 import { HistoryNav } from "@/components/history-nav";
 import { LanguageSwitcher } from "@/components/language-switcher";
-import {
-  exploreSectionHrefs,
-  exploreSectionKeys,
-  type ExploreSectionKey,
-} from "@/lib/explore-sections";
+import { SitePrimaryNav } from "@/components/site-primary-nav";
 import type { Locale } from "@/lib/i18n/config";
 import type { Messages } from "@/lib/i18n/messages";
-
-const navKeys = exploreSectionKeys satisfies readonly ExploreSectionKey[];
 
 type SiteHeaderProps = {
   locale: Locale;
@@ -26,20 +19,7 @@ export function SiteHeader({ locale, messages }: SiteHeaderProps) {
           homeLabel={messages.nav.home}
         />
         <div className="flex flex-wrap items-center justify-end gap-2 sm:gap-3">
-          <nav
-            className="flex flex-wrap items-center justify-end gap-x-3 gap-y-2 text-xs font-medium tracking-wide text-neutral-700 sm:gap-x-4 sm:text-sm"
-            aria-label="Primary"
-          >
-            {navKeys.map((key) => (
-              <Link
-                key={key}
-                href={exploreSectionHrefs[key]}
-                className="transition-colors hover:text-[#0c2340]"
-              >
-                {messages.nav[key]}
-              </Link>
-            ))}
-          </nav>
+          <SitePrimaryNav messages={messages} />
           <LanguageSwitcher currentLocale={locale} />
         </div>
       </div>

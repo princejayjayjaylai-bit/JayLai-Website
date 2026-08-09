@@ -5,7 +5,6 @@ export const exploreSectionKeys = [
   "cv",
   "experience",
   "projects",
-  "achievements",
   "interests",
   "contact",
 ] as const;
@@ -16,7 +15,6 @@ export const exploreSectionHrefs: Record<ExploreSectionKey, string> = {
   about: "/about",
   experience: "/experience",
   projects: "/projects",
-  achievements: "/achievements",
   interests: "/interests",
   cv: "/cv",
   contact: "/contact",
