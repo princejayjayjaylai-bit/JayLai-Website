@@ -21,15 +21,15 @@ function ProjectShowcase({ id }: { id: ProjectShowcaseId }) {
   const images = projectShowcaseImages[id];
 
   return (
-    <div className="aspect-square w-full max-w-[10.5rem] shrink-0 overflow-hidden border border-neutral-300 bg-neutral-50 sm:w-[min(40vw,10.5rem)] lg:mx-0">
+    <div className="aspect-square w-[min(72vw,17.5rem)] shrink-0 overflow-hidden border border-neutral-300 bg-neutral-50 sm:w-[min(40vw,10.5rem)] lg:mx-0">
       {images.length === 0 ? null : images.length === 1 ? (
-        <div className="relative h-full w-full">
+        <div className="relative h-full w-full min-h-[8rem] sm:min-h-0">
           <Image
             src={images[0]}
             alt=""
             fill
-            className="object-cover"
-            sizes="168px"
+            className="object-contain p-2 sm:object-cover sm:p-0"
+            sizes="(max-width: 639px) 280px, 168px"
             unoptimized
           />
         </div>
@@ -40,16 +40,16 @@ function ProjectShowcase({ id }: { id: ProjectShowcaseId }) {
             return (
               <div
                 key={src}
-                className={`relative min-h-0 min-w-0 bg-white ${fullBleed ? "p-0" : "p-1.5"}`}
+                className={`relative min-h-0 min-w-0 bg-white ${fullBleed ? "p-0" : "p-1.5 sm:p-1.5"}`}
               >
                 <Image
                   src={src}
                   alt=""
                   fill
                   className={
-                    fullBleed ? "object-cover" : "object-contain p-1"
+                    fullBleed ? "object-cover" : "object-contain p-0.5 sm:p-1"
                   }
-                  sizes="84px"
+                  sizes="(max-width: 639px) 140px, 84px"
                   unoptimized
                 />
               </div>

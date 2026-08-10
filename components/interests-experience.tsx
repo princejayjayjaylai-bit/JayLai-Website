@@ -381,23 +381,70 @@ export function InterestsExperience({
     );
   };
 
-  const ringHeight = narrowLayout
-    ? Math.min(panelHeight, 320)
-    : panelHeight;
+  const ringHeight = panelHeight;
+
+  const renderMobileThemeNav = () => (
+      <div
+        className="relative flex w-full max-w-[12rem] flex-col items-center gap-3 py-1 touch-pan-y select-none"
+        role="group"
+        aria-label={wheelHint}
+        onWheel={onThemeWheel}
+        onTouchStart={onThemeTouchStart}
+        onTouchEnd={onThemeTouchEnd}
+      >
+        <button
+          type="button"
+          onClick={() => applyTheme(activeIndex - 1)}
+          aria-label={themePrevLabel}
+          className="flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#0c2340] shadow-sm ring-1 ring-neutral-200 transition-colors hover:bg-neutral-50"
+        >
+          <ThemeNavChevron direction="up" />
+        </button>
+        <span
+          key={active.id}
+          className="flex h-[4.5rem] w-[4.5rem] items-center justify-center rounded-full bg-[#eef2f7] ring-1 ring-[#0c2340]/15"
+          aria-label={active.title}
+        >
+          <Image
+            src={active.wheelIcon}
+            alt=""
+            width={THEME_WHEEL_ICON_PX}
+            height={THEME_WHEEL_ICON_PX}
+            className="h-[3.25rem] w-[3.25rem] object-contain"
+            priority
+          />
+        </span>
+        <button
+          type="button"
+          onClick={() => applyTheme(activeIndex + 1)}
+          aria-label={themeNextLabel}
+          className="flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#0c2340] shadow-sm ring-1 ring-neutral-200 transition-colors hover:bg-neutral-50"
+        >
+          <ThemeNavChevron direction="down" />
+        </button>
+      </div>
+    );
 
   return (
     <div className="relative w-full py-16 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-8 lg:px-10">
         <div className="flex min-w-0 flex-col items-stretch gap-6 sm:flex-row sm:items-start sm:gap-6 lg:gap-8 xl:gap-10">
           <div
-            className="relative z-20 mx-auto shrink-0 self-start sm:mx-0"
-            role="group"
-            aria-label={wheelHint}
-            onWheel={onThemeWheel}
-            onTouchStart={onThemeTouchStart}
-            onTouchEnd={onThemeTouchEnd}
+            className={`relative z-20 mx-auto shrink-0 self-start sm:mx-0`}
           >
-            {renderThemeRing(ringHeight)}
+            {narrowLayout ? (
+              renderMobileThemeNav()
+            ) : (
+              <div
+                role="group"
+                aria-label={wheelHint}
+                onWheel={onThemeWheel}
+                onTouchStart={onThemeTouchStart}
+                onTouchEnd={onThemeTouchEnd}
+              >
+                {renderThemeRing(ringHeight)}
+              </div>
+            )}
           </div>
 
           <div className="relative z-0 min-w-0 flex-1">
@@ -420,7 +467,7 @@ export function InterestsExperience({
                 <div
                   className={
                     narrowLayout
-                      ? "relative mt-8 w-full max-w-[10.5rem] sm:max-w-none"
+                      ? "relative mt-8 w-full max-w-[min(72vw,17.5rem)] sm:max-w-none"
                       : "absolute bottom-6 right-6 w-[min(40vw,10.5rem)] sm:bottom-8 sm:right-8"
                   }
                   data-interest-photos
