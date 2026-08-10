@@ -28,6 +28,7 @@ export const enMessages = {
       "Hello—I'm Jay Lai, a law student focused on capital markets across Hong Kong, mainland China, and the United States, with a steady interest in making the underlying facts incontrovertible where it counts—including on Hong Kong listing work in practice. I'm equally drawn to international commercial arbitration as the dispute side of that same cross-border picture. Apart from work, I'm also obsessed with a variety of hobbies involving music, film, and cooking; see Interests on this site for more.",
     introFollowUpBefore:
       "To learn more about me, explore the site and get in touch via ",
+    introFollowUpLinkLabel: "",
     introFollowUpAfter: ".",
     introduction: "Introduction",
     explore: "Explore",

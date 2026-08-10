@@ -1,19 +1,15 @@
-import type { Metadata } from "next";
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useSiteLocale } from "@/components/locale-provider";
 import { PageHero } from "@/components/page-hero";
-import { getLocale } from "@/lib/i18n/get-locale";
 import { localeSerifClass } from "@/lib/i18n/locale-styles";
-import { getMessages } from "@/lib/i18n/messages";
 import {
   projectShowcaseFullBleed,
   projectShowcaseImages,
   type ProjectShowcaseId,
 } from "@/lib/project-showcases";
-
-export const metadata: Metadata = {
-  title: "Projects",
-};
 
 function isProjectShowcaseId(
   value: string | undefined,
@@ -25,7 +21,7 @@ function ProjectShowcase({ id }: { id: ProjectShowcaseId }) {
   const images = projectShowcaseImages[id];
 
   return (
-    <div className="aspect-square w-[min(40vw,10.5rem)] shrink-0 overflow-hidden border border-neutral-300 bg-neutral-50 lg:mx-0">
+    <div className="aspect-square w-full max-w-[10.5rem] shrink-0 overflow-hidden border border-neutral-300 bg-neutral-50 sm:w-[min(40vw,10.5rem)] lg:mx-0">
       {images.length === 0 ? null : images.length === 1 ? (
         <div className="relative h-full w-full">
           <Image
@@ -119,9 +115,8 @@ function LegalResearchBody({
   );
 }
 
-export default async function ProjectsPage() {
-  const locale = await getLocale();
-  const m = getMessages(locale);
+export default function ProjectsPage() {
+  const { locale, messages: m } = useSiteLocale();
   const p = m.projects;
   const serif = localeSerifClass(locale);
 
@@ -150,12 +145,12 @@ export default async function ProjectsPage() {
                   return (
                     <li
                       key={project.title}
-                      className={`flex items-center p-8 sm:p-10 ${
-                        uniformLegalRow ? "min-h-[15.5rem] sm:min-h-[16rem]" : ""
+                      className={`p-5 sm:p-8 md:p-10 ${
+                        uniformLegalRow ? "md:min-h-[16rem]" : ""
                       }`}
                     >
                       {showcaseId ? (
-                        <div className="flex w-full items-center justify-between gap-4 sm:gap-6">
+                        <div className="flex w-full flex-col items-stretch gap-6 md:flex-row md:items-center md:justify-between md:gap-6">
                           <div className="min-w-0 flex-1">
                             <h3 className="text-lg font-semibold text-neutral-950 sm:text-xl">
                               {project.title}
@@ -164,7 +159,9 @@ export default async function ProjectsPage() {
                               {project.description}
                             </p>
                           </div>
-                          <ProjectShowcase id={showcaseId} />
+                          <div className="mx-auto shrink-0 md:mx-0">
+                            <ProjectShowcase id={showcaseId} />
+                          </div>
                         </div>
                       ) : projectHasPapers(project) ? (
                         <div className="w-full max-w-3xl">

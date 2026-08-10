@@ -1,5 +1,8 @@
-import type { Metadata } from "next";
+"use client";
+
 import Link from "next/link";
+import { useMemo } from "react";
+import { useSiteLocale } from "@/components/locale-provider";
 import { InterestsExperience } from "@/components/interests-experience";
 import { PageHero } from "@/components/page-hero";
 import {
@@ -7,27 +10,24 @@ import {
   interestThemeIds,
   interestWheelIconPath,
 } from "@/lib/interests-data";
-import { getLocale } from "@/lib/i18n/get-locale";
 import { localeSerifClass } from "@/lib/i18n/locale-styles";
-import { getMessages } from "@/lib/i18n/messages";
 
-export const metadata: Metadata = {
-  title: "Interests",
-};
-
-export default async function InterestsPage() {
-  const locale = await getLocale();
-  const m = getMessages(locale);
+export default function InterestsPage() {
+  const { locale, messages: m } = useSiteLocale();
   const i = m.interests;
   const serif = localeSerifClass(locale);
 
-  const themes = interestThemeIds.map((id) => ({
-    id,
-    title: i.themes[id].title,
-    description: i.themes[id].description,
-    photos: interestPhotoPaths(id),
-    wheelIcon: interestWheelIconPath(id),
-  }));
+  const themes = useMemo(
+    () =>
+      interestThemeIds.map((id) => ({
+        id,
+        title: i.themes[id].title,
+        description: i.themes[id].description,
+        photos: interestPhotoPaths(id),
+        wheelIcon: interestWheelIconPath(id),
+      })),
+    [i.themes],
+  );
 
   return (
     <>

@@ -388,9 +388,9 @@ export function InterestsExperience({
   return (
     <div className="relative w-full py-16 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-8 lg:px-10">
-        <div className="flex min-w-0 flex-row items-start gap-3 sm:gap-6 lg:gap-8 xl:gap-10">
+        <div className="flex min-w-0 flex-col items-stretch gap-6 sm:flex-row sm:items-start sm:gap-6 lg:gap-8 xl:gap-10">
           <div
-            className="relative z-20 shrink-0 self-start"
+            className="relative z-20 mx-auto shrink-0 self-start sm:mx-0"
             role="group"
             aria-label={wheelHint}
             onWheel={onThemeWheel}
@@ -404,17 +404,25 @@ export function InterestsExperience({
             <div className="relative min-h-[min(480px,72vh)] lg:min-h-[min(540px,68vh)]">
               <div
                 ref={panelRef}
-                className="relative min-h-[inherit] border border-neutral-300 bg-white p-8 shadow-sm sm:p-10 lg:p-12"
+                className="relative min-h-[inherit] border border-neutral-300 bg-white p-5 shadow-sm sm:p-10 lg:p-12"
               >
                 <p className="text-lg font-semibold uppercase tracking-[0.12em] text-[#0c2340] sm:text-xl sm:tracking-[0.14em]">
                   {active.title}
                 </p>
-                <p className="mt-6 max-w-3xl pr-[calc(min(40vw,10.5rem)+1rem)] text-base leading-relaxed text-neutral-700 sm:mt-8 sm:text-lg sm:leading-8">
+                <p
+                  className={`mt-6 max-w-3xl text-base leading-relaxed text-neutral-700 sm:mt-8 sm:text-lg sm:leading-8 ${
+                    narrowLayout ? "" : "pr-[calc(min(40vw,10.5rem)+1rem)]"
+                  }`}
+                >
                   {active.description}
                 </p>
 
                 <div
-                  className="absolute bottom-6 right-6 w-[min(40vw,10.5rem)] sm:bottom-8 sm:right-8"
+                  className={
+                    narrowLayout
+                      ? "relative mt-8 w-full max-w-[10.5rem] sm:max-w-none"
+                      : "absolute bottom-6 right-6 w-[min(40vw,10.5rem)] sm:bottom-8 sm:right-8"
+                  }
                   data-interest-photos
                 >
                   <div

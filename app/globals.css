@@ -16,6 +16,11 @@
 body {
   background: #ffffff;
   color: #171717;
+  overflow-x: clip;
+}
+
+html {
+  overflow-x: clip;
 }
 
 html.locale-en body {
@@ -23,11 +28,17 @@ html.locale-en body {
 }
 
 html.locale-zh-hans body {
-  font-family: var(--font-noto-serif-sc), "PingFang SC", "Microsoft YaHei",
-    sans-serif;
+  font-family: var(--font-noto-serif-sc), "Noto Serif SC", "Source Han Serif SC",
+    serif;
 }
 
 html.locale-zh-hant body {
-  font-family: var(--font-noto-serif-tc), "PingFang TC", "Microsoft JhengHei",
-    sans-serif;
+  font-family: var(--font-noto-serif-tc), "Noto Serif TC", "Source Han Serif TC",
+    serif;
+}
+
+/** English nav & headings */
+.font-display-en {
+  font-family: "Arial Black", "Arial-Black", sans-serif;
+  font-weight: 900;
 }

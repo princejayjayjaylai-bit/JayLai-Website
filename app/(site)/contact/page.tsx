@@ -1,21 +1,16 @@
-import type { Metadata } from "next";
+"use client";
+
+import { useSiteLocale } from "@/components/locale-provider";
 import { PageHero } from "@/components/page-hero";
-import { getLocale } from "@/lib/i18n/get-locale";
 import { localeSerifClass } from "@/lib/i18n/locale-styles";
-import { getMessages } from "@/lib/i18n/messages";
 import {
   contactEmail,
   contactPhone,
   contactPhoneHref,
 } from "@/lib/site-nav";
 
-export const metadata: Metadata = {
-  title: "Contact",
-};
-
-export default async function ContactPage() {
-  const locale = await getLocale();
-  const m = getMessages(locale);
+export default function ContactPage() {
+  const { locale, messages: m } = useSiteLocale();
   const c = m.contact;
   const serif = localeSerifClass(locale);
 

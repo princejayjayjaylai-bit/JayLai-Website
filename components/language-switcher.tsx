@@ -1,15 +1,11 @@
 "use client";
 
-import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-import { LOCALE_COOKIE, localeOptions, type Locale } from "@/lib/i18n/config";
+import { localeOptions, type Locale } from "@/lib/i18n/config";
+import { useSiteLocale } from "@/components/locale-provider";
 
-type LanguageSwitcherProps = {
-  currentLocale: Locale;
-};
-
-export function LanguageSwitcher({ currentLocale }: LanguageSwitcherProps) {
-  const router = useRouter();
+export function LanguageSwitcher() {
+  const { locale: currentLocale, setLocale } = useSiteLocale();
   const [open, setOpen] = useState(false);
   const rootRef = useRef<HTMLDivElement>(null);
 
@@ -24,9 +20,10 @@ export function LanguageSwitcher({ currentLocale }: LanguageSwitcherProps) {
   }, []);
 
   function selectLocale(locale: Locale) {
-    document.cookie = `${LOCALE_COOKIE}=${locale};path=/;max-age=31536000;SameSite=Lax`;
     setOpen(false);
-    router.refresh();
+    if (locale !== currentLocale) {
+      setLocale(locale);
+    }
   }
 
   return (

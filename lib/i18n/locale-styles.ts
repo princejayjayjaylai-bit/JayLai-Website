@@ -11,6 +11,7 @@ export function localeBodyClass(locale: Locale): string {
   }
 }
 
+/** Default text on the site shell (Chinese body = 思源宋体; English = Geist). */
 export function localeFontVariables(locale: Locale): string {
   switch (locale) {
     case "zh-Hans":
@@ -22,12 +23,16 @@ export function localeFontVariables(locale: Locale): string {
   }
 }
 
-/** Serif display headings — English uses Noto SC for 黎杰 consistency. */
+/** Page heroes, section titles (Chinese = 思源黑体; English = Arial Black). */
 export function localeSerifClass(locale: Locale): string {
   switch (locale) {
+    case "zh-Hans":
+      return "font-[family-name:var(--font-noto-sans-sc)] font-bold";
     case "zh-Hant":
-      return "font-[family-name:var(--font-noto-serif-tc)]";
+      return "font-[family-name:var(--font-noto-sans-tc)] font-bold";
     default:
-      return "font-[family-name:var(--font-noto-serif-sc)]";
+      return "font-display-en font-black";
   }
 }
+
+export const localeNavClass = localeSerifClass;

@@ -25,9 +25,10 @@ export const zhHansMessages = {
     tagline: "法学 · 资本市场",
     targetRole: "法律实习生（IPO 方向）",
     intro:
-      "你好，我是黎杰（Jay Lai），法学专业在读，主要关注香港、中国内地与美国的资本市场。课业与交易项目之外，我持续关注音乐与电影，也常以烹饪作为调剂。",
-    introFollowUpBefore: "",
-    introFollowUpAfter: "",
+      "您好，我是黎杰（Jay Lai），一名法学在读学生，研究聚焦于香港、中国内地及美国三地资本市场；在实务层面尤其关注香港上市相关业务。与此同时，我也对跨境商事图景下的国际商事仲裁抱有浓厚兴趣。\n\n此外，我有广泛的爱好，特别是音乐、电影与美食。",
+    introFollowUpBefore: "欢迎浏览本站进一步了解我，也可通过",
+    introFollowUpLinkLabel: "联系页面",
+    introFollowUpAfter: "与我取得沟通。",
     introduction: "个人介绍",
     explore: "浏览全站",
     exploreScrollNext: "向右浏览下一板块",

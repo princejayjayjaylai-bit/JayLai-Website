@@ -1,6 +1,8 @@
-import type { Metadata } from "next";
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useSiteLocale } from "@/components/locale-provider";
 import { PageHero } from "@/components/page-hero";
 import {
   experienceLandmarkColumnClassName,
@@ -8,17 +10,10 @@ import {
   experienceLandmarkPaths,
   experienceLandmarkSizes,
 } from "@/lib/experience-landmarks";
-import { getLocale } from "@/lib/i18n/get-locale";
 import { localeSerifClass } from "@/lib/i18n/locale-styles";
-import { getMessages } from "@/lib/i18n/messages";
 
-export const metadata: Metadata = {
-  title: "Experience",
-};
-
-export default async function ExperiencePage() {
-  const locale = await getLocale();
-  const m = getMessages(locale);
+export default function ExperiencePage() {
+  const { locale, messages: m } = useSiteLocale();
   const e = m.experience;
   const serif = localeSerifClass(locale);
   const layout = experienceLandmarkLayout;
@@ -36,7 +31,7 @@ export default async function ExperiencePage() {
 
               return (
                 <li key={item.firm}>
-                  <div className="flex items-stretch gap-6 sm:gap-10">
+                  <div className="flex flex-col gap-6 sm:flex-row sm:items-stretch sm:gap-10">
                     <div className="min-w-0 flex-1">
                       <h2
                         className={`${serif} text-xl font-semibold text-neutral-950 sm:text-2xl`}
@@ -51,7 +46,7 @@ export default async function ExperiencePage() {
                       </p>
                     </div>
                     <div
-                      className={`${experienceLandmarkColumnClassName} ${landmark.columnClassName}`}
+                      className={`${experienceLandmarkColumnClassName} mx-auto sm:mx-0 ${landmark.columnClassName}`}
                     >
                       <div className={landmark.innerClassName}>
                         <Image

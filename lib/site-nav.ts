@@ -20,4 +20,4 @@ export const contactPhoneHref = profile.contact.phoneHref;
 
 export const cvPdfPath = "/cv.pdf";
 
-export const serifClass = "font-[family-name:var(--font-noto-serif-sc)]";
+export const serifClass = "font-display-en";

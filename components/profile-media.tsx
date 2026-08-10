@@ -72,18 +72,18 @@ export function HomeHero({ locale }: HomeHeroProps) {
         aria-hidden
       />
 
-      <div className="relative mx-auto min-h-[520px] max-w-6xl px-6 sm:min-h-[580px] sm:px-8 lg:min-h-[640px] lg:px-10">
+      <div className="relative mx-auto min-h-[420px] max-w-6xl px-4 sm:min-h-[580px] sm:px-8 lg:min-h-[640px] lg:px-10">
         <div
-          className="pointer-events-none absolute bottom-0 left-6 z-[1] h-[min(68vh,620px)] w-[min(78vw,440px)] max-w-[560px] sm:left-8 sm:h-[min(72vh,680px)] lg:left-10 lg:h-[min(78vh,760px)] lg:w-[min(48vw,560px)]"
+          className="pointer-events-none absolute bottom-0 left-4 z-[1] h-[min(52vh,420px)] w-[min(70vw,360px)] max-w-[560px] sm:left-8 sm:h-[min(72vh,680px)] sm:w-[min(78vw,440px)] lg:left-10 lg:h-[min(78vh,760px)] lg:w-[min(48vw,560px)]"
           aria-hidden
         >
           <HeroSilhouette className="h-full w-full" />
         </div>
 
-        <div className="relative z-[2] flex min-h-[520px] items-center justify-end pr-6 sm:min-h-[580px] sm:pr-10 lg:min-h-[640px] lg:pr-14 xl:pr-20">
+        <div className="relative z-[2] flex min-h-[420px] items-center justify-center px-2 sm:min-h-[580px] sm:justify-end sm:pr-10 lg:min-h-[640px] lg:pr-14 xl:pr-20">
           <h1
             id="hero-heading"
-            className={`${serif} max-w-xl text-right text-4xl font-semibold leading-tight tracking-tight sm:text-5xl lg:text-6xl`}
+            className={`${serif} max-w-xl text-center text-4xl font-semibold leading-tight tracking-tight sm:text-right sm:text-5xl lg:text-6xl`}
           >
             {getDisplayName(locale)}
           </h1>

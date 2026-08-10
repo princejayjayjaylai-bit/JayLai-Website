@@ -1,14 +1,14 @@
+"use client";
+
 import Link from "next/link";
+import { useSiteLocale } from "@/components/locale-provider";
 import { ExploreRibbon } from "@/components/explore-ribbon";
 import { HomeHero, ProfilePhotoCard } from "@/components/profile-media";
 import { getExploreRibbonItems } from "@/lib/explore-sections";
-import { getLocale } from "@/lib/i18n/get-locale";
 import { localeSerifClass } from "@/lib/i18n/locale-styles";
-import { getMessages } from "@/lib/i18n/messages";
 
-export default async function Home() {
-  const locale = await getLocale();
-  const m = getMessages(locale);
+export default function Home() {
+  const { locale, messages: m } = useSiteLocale();
   const serif = localeSerifClass(locale);
 
   return (
@@ -28,7 +28,7 @@ export default async function Home() {
               >
                 {m.home.introduction}
               </h2>
-              <p className="mt-8 text-base leading-relaxed text-neutral-700 sm:text-lg sm:leading-8">
+              <p className="mt-8 whitespace-pre-line text-base leading-relaxed text-neutral-700 sm:text-lg sm:leading-8">
                 {m.home.intro}
               </p>
               {m.home.introFollowUpBefore ? (
@@ -38,7 +38,7 @@ export default async function Home() {
                     href="/contact"
                     className="font-medium text-[#0c2340] underline decoration-[#0c2340]/30 underline-offset-4 hover:decoration-[#0c2340]"
                   >
-                    {m.nav.contact}
+                    {m.home.introFollowUpLinkLabel || m.nav.contact}
                   </Link>
                   {m.home.introFollowUpAfter}
                 </p>

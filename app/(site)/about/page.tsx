@@ -1,18 +1,13 @@
-import type { Metadata } from "next";
+"use client";
+
 import Link from "next/link";
+import { useSiteLocale } from "@/components/locale-provider";
 import { PageHero } from "@/components/page-hero";
 import { ProfilePhotoCard } from "@/components/profile-media";
-import { getLocale } from "@/lib/i18n/get-locale";
 import { localeSerifClass } from "@/lib/i18n/locale-styles";
-import { getMessages } from "@/lib/i18n/messages";
 
-export const metadata: Metadata = {
-  title: "About",
-};
-
-export default async function AboutPage() {
-  const locale = await getLocale();
-  const m = getMessages(locale);
+export default function AboutPage() {
+  const { locale, messages: m } = useSiteLocale();
   const a = m.about;
   const serif = localeSerifClass(locale);
 
