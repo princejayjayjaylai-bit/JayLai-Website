@@ -1,8 +1,9 @@
-# Next.js 16: let Netlify apply OpenNext automatically (do not set publish = ".next").
+# Next.js on Netlify: plugin + publish ".next" (empty publish = repo root → build error).
 # https://docs.netlify.com/build/frameworks/framework-setup-guides/nextjs/overview/
 
 [build]
   command = "npm run build"
+  publish = ".next"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
