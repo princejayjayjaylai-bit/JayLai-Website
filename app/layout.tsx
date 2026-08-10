@@ -48,8 +48,8 @@ const notoSerifTc = Noto_Serif_TC({
 
 export const metadata: Metadata = {
   title: {
-    default: "Jay Lai | 黎杰 — Law Student, Capital Markets",
-    template: "%s | Jay Lai",
+    default: "Jay Lai | 黎杰",
+    template: "%s | Jay Lai | 黎杰",
   },
   description:
     "Personal profile of Jay Lai, law student at East China University of Political Science and Law, with experience in Hong Kong IPO transactions and capital markets practice.",
