@@ -1,0 +1,8 @@
+# Next.js 16: let Netlify apply OpenNext automatically (do not set publish = ".next").
+# https://docs.netlify.com/build/frameworks/framework-setup-guides/nextjs/overview/
+
+[build]
+  command = "npm run build"
+
+[build.environment]
+  NODE_VERSION = "20"
