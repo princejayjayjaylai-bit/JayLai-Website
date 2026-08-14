@@ -100,11 +100,10 @@ export const enMessages = {
         bullets: [
           "Legal due diligence and listing compliance work on 30+ HKEX IPO mandates across AI, technology, healthcare, mining, consumer, food, and manufacturing.",
           "200+ third-party (TPDD) and management (MDD) diligence interviews—notes, follow-ups, and coordination with issuers, sponsors, and other advisors.",
-          "Sole coordinator for an extended TPDD workstream: interviews, verification, working papers, and deal progression.",
-          "Independent listing feasibility analyses for multiple issuers; reports well received by partners, associates, and clients.",
-          "Drafted legal opinion and due diligence report sections (corporate history, IP, legal risks); governance documents and equity charts for 10+ companies.",
-          "Printer sessions, walkthrough testing on revenue/procurement/inventory/cash cycles, and IP / penalties / litigation / media checks.",
-          "20+ client pitch books with sector research and comparable company analysis.",
+          "Solely managed an extended due diligence investigation for a listed company project.",
+          "Independently conducted and presented listing feasibility analyses for 2 companies across different industries, with reports well received by partners, senior associates, and clients.",
+          "Drafted and reviewed board/shareholder resolutions, equity structure charts, and governance documents for 10+ companies; participated in printer sessions and walkthrough testing on key business flows.",
+          "Conducted legal due diligence on administrative penalties, IP, litigation, and compliance issues; prepared 20+ client pitch books with sector research and benchmarking.",
         ],
       },
       {
@@ -113,8 +112,8 @@ export const enMessages = {
         role: "Intern, Capital Markets Practice Group",
         bullets: [
           "Capital market: 1 PRC IPO and 1 HKEX IPO—drafting and reviewing due diligence report chapters.",
-          "Reviewed 20+ M&A, investment, financing, and general advisory contracts; drafted governance documents for a major listed company.",
-          "Contentious: foreign-related real estate dispute—pleadings, evidence lists, case research memos, and trial submissions drafted independently.",
+          "Reviewed 20+ M&A, investment, financing, and general advisory contracts; drafted board and shareholders' meeting documents for a listed company.",
+          "Litigation: drafted litigation documents for a foreign-related real estate dispute, including statement of claim, defense, cross-examination opinions, case search report, claim analysis, and evidence list.",
         ],
       },
     ],
@@ -184,7 +183,7 @@ export const enMessages = {
       "Download the full CV (PDF), including education, internships, and contact details",
     highlights: [
       "East China University of Political Science and Law · GPA 89/100",
-      "Jingtian & Gongcheng — 30+ HKEX IPO projects (securities, Shanghai)",
+      "Jingtian & Gongcheng — 30+ HKEX IPO projects; listing feasibility analyses and legal opinion / DD report drafting",
       "Dentons (Nanning) — PRC & HK IPO, M&A contracts, litigation drafting",
       "Mandarin, Cantonese; IELTS 7.5 (Reading 8.5, Listening 8, Writing 7, Speaking 7)",
     ],

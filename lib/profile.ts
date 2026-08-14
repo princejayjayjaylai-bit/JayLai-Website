@@ -57,10 +57,11 @@ export const profile = {
   selfEvaluationEn: [
     "Strong work ethic with consistently positive feedback from supervisors, clients, and other advisors.",
     "Effective coordination with issuers, sponsors, auditors, and other intermediaries on live transactions.",
-    "Genuine long-term interest in Hong Kong capital markets and IPO practice; comfortable in intensive deal rhythms.",
+    "Able to use AI tools to improve efficiency and quality; comfortable in intensive deal rhythms.",
+    "Genuine long-term interest in Hong Kong capital markets and IPO practice.",
   ],
   selfEvaluationZh:
-    "工作能力突出，沟通协调能力良好；对香港资本市场及 IPO 业务具有浓厚兴趣，可适应高强度项目节奏。",
+    "工作能力突出，收获带教、客户、其他机构同事的高度评价；具备良好沟通协调能力；有能力运用 AI 工具提高工作效率和质量；对香港资本市场及 IPO 业务具有浓厚兴趣，可适应高强度项目节奏。",
 } as const;
 
 export const internships = [
@@ -74,18 +75,20 @@ export const internships = [
     highlightsEn: [
       "Legal due diligence and listing compliance work on 30+ HKEX IPO mandates across AI, technology, healthcare, mining, consumer, food, and manufacturing.",
       "200+ third-party (TPDD) and management (MDD) diligence interviews—notes, follow-ups, and coordination with issuers, sponsors, and other advisors.",
-      "Sole coordinator for an extended TPDD workstream: interviews, verification, working papers, and deal progression.",
-      "Independent listing feasibility analyses for multiple issuers; reports well received by partners, associates, and clients.",
-      "Drafted legal opinion and due diligence report sections (corporate history, IP, legal risks); governance documents and equity charts for 10+ companies.",
-      "Printer sessions, walkthrough testing on revenue/procurement/inventory/cash cycles, and IP / penalties / litigation / media checks.",
-      "20+ client pitch books with sector research and comparable company analysis.",
+      "Solely managed an extended due diligence investigation for a listed company project.",
+      "Independently conducted and presented listing feasibility analyses for 2 companies across different industries, with reports well received by partners, senior associates, and clients.",
+      "Drafted and reviewed board/shareholder resolutions, equity structure charts, and governance documents across multiple projects; mapped equity structures for 10+ companies.",
+      "Participated in printer sessions and coordinated with issuers, sponsors, auditors, and other professional parties throughout transaction processes.",
+      "Conducted legal due diligence on administrative penalties, IP, litigation, and compliance issues; prepared 20+ client pitch books with sector research and benchmarking.",
     ],
     highlightsZh: [
-      "参与 30 余个港股 IPO 项目的法律尽职调查及上市合规核查，覆盖 AI、科技、医疗、矿产、消费、食品及制造业等。",
-      "参与 200 余场 TPDD 及 MDD 访谈，负责记录整理、核查跟进及与发行人、保荐人、中介机构的沟通。",
-      "独立负责某项目加期 TPDD，统筹访谈、核查、底稿及项目推进。",
-      "独立完成多家公司的上市可能性分析并向客户汇报；起草法律意见书及尽调报告多章节；梳理 10 余家公司股权架构。",
-      "参与 Printer Session、穿行测试及知识产权、诉讼仲裁、负面舆情等专项核查；制作 20 余份 Pitch Book。",
+      "参与 30 余个港股 IPO 项目的法律尽职调查及上市合规核查，覆盖人工智能、科技、医疗健康、矿产资源、消费品、食品及制造业等。",
+      "参与 200 余场 TPDD 及 MDD 访谈，负责访谈记录整理、核查跟进，并与发行人、保荐人及其他中介机构保持高效沟通。",
+      "全程独立负责某项目加期 TPDD，统筹访谈安排、核查跟进、底稿整理及项目推进等事项。",
+      "独立完成 5 家不同行业公司的上市可能性分析，形成报告并向客户汇报，均获客户认可。",
+      "独立完成 5 个项目法律意见书及尽调报告相关章节（发行人基本情况、历史沿革、知识产权及法律风险等）。",
+      "独立梳理 10 余家公司股权架构及三会、治理文件；曾参与 Printer Session、穿行测试及知识产权、行政处罚、诉讼仲裁、负面舆情等专项核查。",
+      "制作 20 余份客户 Pitch Book，开展行业研究、可比公司分析及项目经验整理。",
     ],
   },
   {
